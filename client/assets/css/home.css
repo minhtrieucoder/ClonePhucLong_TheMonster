@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* chung */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* hiệu ứng cuộn cho web */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.col-half {
+    width: 50%;
+    
+}
+
+.col-third {
+    width: calc(100% / 3);
+    margin: 0 24px;
+}
+
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: 2px solid #0C713D;
+}
+
+/* Start CSS hearder-top */
+#header-top {    
+    font-size: 12px;
+    height: 64px;
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.header-logo img {
+    max-width: 60px;
+    /* width: 14%; */
+}
+
+.header__text {
+    font-size: 24px;
+    font-family: "Inconsolata", monospace;
+    color: #e54716;
+    display: block;
+    margin-left: 100px;
+}
+
+.header-signup,
+.header-cart {
+    font-size: 14px;
+    display: flex;
+    cursor: pointer;
+}
+
+.header-signup {
+    padding: 4px 8px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.header-signup:hover {
+    color: #0C713D;
+}
+
+.header-cart {
+    color: #0C713D;
+    border: 1.2px solid #0C713D;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+.header-cart:hover {
+    color: #fff;
+    background-color: #0C713D;
+}
+
+.header-signup i,
+.header-cart i {
+    opacity: 0.8;
+    margin: auto;
+    margin-right: 6px;    
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+.modal .modal-signup {
+    position: relative;
+    width: 300px;
+    /* height: 250px; */
+    margin: auto;
+    text-align: center;
+    background: #fff;
+    margin-top: 130px;
+    padding: 20px;
+    padding-top: 72px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.modal .modal-signup i {
+    font-size: 20px;
+    color: #fff;
+    background-color: #0C713D;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.modal .modal-signup i:hover {
+    color: #0C713D;
+    background-color: #fff;
+    /* border: 1.2px solid #0C713D; */
+}
+
+
+.modal .modal-signup h4 {
+    color: #666666;
+    font-size: 20px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.modal .modal-signup p {
+    font-size: 14px;
+}
+
+.modal .modal-signup input {
+    width: 100%;
+    padding: 14px;
+    margin: 24px 0;
+    border: 1.2px solid #ccc;
+}
+
+.modal .modal-signup .signup-btn {
+    color: #fff;
+    background-color: #0C713D;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border-style: none;
+    font-family: 'Baloo 2';
+    cursor: pointer;
+}
+
+.modal .modal-signup .signup-btn:hover {
+    color: #0C713D;
+    background-color: #fff;
+    border: 1.2px solid #0C713D;
+}
+
+.modal .modal-logo {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;    
+    height: 100px;    
+    top: -20%;
+    padding: 12px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 1px -3px, rgb(0 0 0 / 14%) 0px 1px 1px 1px, rgb(0 0 0 / 12%) 0px 1px 1px 1px;
+
+}
+
+.modal .modal-logo img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-left: 2px;
+}
+/* End CSS hearder-top */
+
+/* Start CSS hearder-nav */
+#header-nav {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 22px;
+    font-weight: 600;
+}
+    
+#header-nav a {
+    font-size: 16px;
+    color: #666666;
+    text-transform: uppercase;
+    padding: 0 16px;
+}
+
+#header-nav .nav-active,
+#header-nav a:hover {
+    color: #0C713D;
+}
+/* End CSS hearder-nav */
+
+/* Start CSS container */
+#container {
+    margin-top: 90px;
+    background: url(/assets/img/background_home.png) no-repeat bottom right;
+}
+
+.banner img {
+    width: 100%;
+}
+
+/* .slider {
+    display: flex;
+    border-bottom: 1px solid #e8e8e8;
+} */
+
+.slider-current {
+    /* width: 100%; */
+    /* margin: 36px auto; */
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 12px; */
+}
+
+.slider-main {
+    display: flex;
+    position: relative;
+    transition: all 0.8s ease;
+}
+
+.slider-btnPrev,
+.slider-btnNext {
+    font-size: 2.2rem;
+    font-weight: 1000;
+    color: #0C713D;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+}
+
+.slider-btnPrev {
+    left: 12px;
+    /* transform: translateX(-50%); */
+}
+
+.slider-btnNext {
+    right: 12px;
+    /* transform: translateX(50%); */
+}
+
+/* Start CSS content */
+.content .row1,
+.content .row2 {
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.content .col1,
+.content .col2 {
+    margin: 0 68px;
+}
+
+.content .describe h4 {
+    color: #0C713D;    
+    font-size: 24px;
+    font-family: 'Muli', sans-serif;
+}
+
+.content .describe p {
+    font-size: 14px;
+}
+
+.content .btn-seeMore {
+    display: inline-flex;    
+    border: 1.2px solid #0C713D;
+    border-radius: 6px;
+    padding: 3px 12px;
+    cursor: pointer;
+}
+
+.content .btn-seeMore:hover {
+    background-color: #0C713D;
+}
+.content .btn-seeMore:hover a {
+    color: #fff;
+}
+
+.content .btn-seeMore a {
+    color: #0C713D;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.content .col1 img {
+    max-width: 530px;
+    border: 5px solid #fff;
+}
+
+.content .col2 img {
+    max-width: 320px;
+    border: 5px solid #fff;
+}
+/* End CSS content */
+/* End CSS container */
+
+/* Start CSS footer */
+footer {
+    padding: 48px 48px 0px 48px;
+    border-top: 2px solid #0C713D;
+    background-color: #fdf5e6;
+    /* background-color: #f1f1f1; */
+    filter: grayscale(75%);
+}
+
+footer .map iframe {
+    width: 100%;   
+}
+
+footer .row1 {
+    display: flex;
+}
+
+footer .col1 h4,
+footer .col4 h4 {
+    color: #0C713D;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+footer .col1 .contact-item {
+    color: #4b4b4b;
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    align-items: baseline;
+}
+
+footer .col1 .contact-item i {
+    color: #0C713D;
+    margin-right: 10px;
+}
+
+footer .col2 {
+    display: flex;
+}
+
+footer form {
+    /* display: inline-block;
+    width: 100%; */
+    display: flow-root;
+}
+
+footer form input {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    height: 28px;
+    padding: 8px 16px;
+    margin: 16px 0;
+    border: 1px solid #ccc;
+}
+
+footer form input:last-child {
+    width: auto;
+    color: #fff;
+    background-color: #0C713D;
+    margin: 32px 0;
+    border: none;
+    cursor: pointer;
+}
+
+footer form input:last-child:hover {
+    color: #0C713D;
+    background-color: #fff;
+}
+
+footer .col4 {
+    padding-left: 60px;
+}
+
+footer .col4 h4 {
+    margin-bottom: 10px;
+}
+
+footer .col4 .product-item {
+    color: #4b4b4b;
+    font-size: 14px;
+    padding: 3px;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+footer .col4 i:hover,
+footer .col4 .product-item:hover {
+    color: #0C713D;
+}
+
+footer .col4 i {
+    color: #4b4b4b;
+    font-size: 24px;
+    padding: 54px 12px 0 0;
+    cursor: pointer;
+}
+
+footer .copyrights p {
+    color: #4b4b4b;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    margin-top: 12px;
+    border-top: 1px solid #0C713D;
+}
+
+/* End CSS footer */
